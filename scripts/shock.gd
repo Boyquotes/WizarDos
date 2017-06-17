@@ -6,6 +6,7 @@ var animationSpeed = null
 var animationTime = null
 var sprite = null
 var movement = Vector2()
+var speed = 9
 var property = null
 
 func inicialize(pos, state):
@@ -13,16 +14,16 @@ func inicialize(pos, state):
 	set_global_pos(pos)
 	if (state == 1):
 		animationColumn = 7
-		movement = Vector2(-16,8)
+		movement = Vector2(-2,1)*speed
 	elif (state == 2):
 		animationColumn = 5
-		movement = Vector2(16,8)
+		movement = Vector2(2,1)*speed
 	elif (state == 3):
 		animationColumn = 3
-		movement = Vector2(16,-8)
+		movement = Vector2(2,-1)*speed
 	else:
 		animationColumn = 1
-		movement = Vector2(-16,-8)
+		movement = Vector2(-2,-1)*speed
 	sprite.set_frame(animationColumn*4)
 	set_fixed_process(true)
 
@@ -38,6 +39,7 @@ func _fixed_process(delta):
 		sprite.set_frame(animationStep+animationColumn*4)
 
 func _ready():
+	speed = 9
 	animationStep = 0
 	animationSpeed = 2
 	animationTime = animationSpeed

@@ -1,19 +1,12 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scripts/wizard.gd" type="Script" id=1]
-[ext_resource path="res://scripts/hitbox.gd" type="Script" id=2]
-[ext_resource path="res://assets/blueWizard.png" type="Texture" id=3]
+[ext_resource path="res://assets/blueWizard.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 16.0
-
-[sub_resource type="CapsuleShape2D" id=2]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
 
 [sub_resource type="StyleBoxFlat" id=3]
 
@@ -39,36 +32,10 @@ collision/mask = 1
 collision/margin = 0.001
 script/script = ExtResource( 1 )
 
-[node name="hitbox" type="KinematicBody2D" parent="."]
-
-editor/display_folded = true
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1.30746, 0, 0, 1.54429, -3.87008, -28.9148 )
-shapes/0/trigger = true
-collision/layers = 1
-collision/mask = 1
-collision/margin = 0.08
-script/script = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="hitboxColl" type="CollisionShape2D" parent="hitbox"]
-
-transform/pos = Vector2( -3.87008, -28.9148 )
-transform/scale = Vector2( 1.30746, 1.54429 )
-shape = SubResource( 2 )
-trigger = true
-_update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="wizardSprite" type="Sprite" parent="."]
 
 transform/pos = Vector2( -3.94334, -36.924 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 hframes = 6
 
 [node name="wizardColl" type="CollisionShape2D" parent="."]
