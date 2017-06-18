@@ -12,5 +12,5 @@ func solveBodyCollision(body):
 		get_parent().get_parent().queue_free()
 
 func _ready():
-	damage = 100
+	damage = 10
 	connect('body_enter',self,'solveBodyCollision')
