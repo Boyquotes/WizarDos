@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/wallpaper.jpg" type="Texture" id=2]
-[ext_resource path="res://assets/blueWizard.png" type="Texture" id=3]
-[ext_resource path="res://assets/redWizard.png" type="Texture" id=4]
-[ext_resource path="res://assets/fireball.png" type="Texture" id=5]
-[ext_resource path="res://assets/icicle.png" type="Texture" id=6]
-[ext_resource path="res://assets/shock.png" type="Texture" id=7]
+[ext_resource path="res://font/customVeryVeryTiny.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://font/customVeryTiny.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://assets/blueWizard.png" type="Texture" id=5]
+[ext_resource path="res://assets/redWizard.png" type="Texture" id=6]
+[ext_resource path="res://assets/fireball.png" type="Texture" id=7]
+[ext_resource path="res://assets/icicle.png" type="Texture" id=8]
+[ext_resource path="res://assets/shock.png" type="Texture" id=9]
 
 [node name="menu" type="Node2D"]
 
@@ -25,10 +27,11 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 12.0
-margin/top = 874.0
-margin/right = 118.0
-margin/bottom = 939.0
+margin/left = 30.0
+margin/top = 798.0
+margin/right = 176.0
+margin/bottom = 915.0
+custom_fonts/font = ExtResource( 3 )
 text = "Ginard Falgueras
 Albert Madrenys
 Juny 2017"
@@ -46,11 +49,12 @@ margin/left = 475.0
 margin/top = 326.0
 margin/right = 598.0
 margin/bottom = 380.0
-custom_colors/font_color_disabled = Color( 0.644531, 0.309677, 0.309677, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.902344, 0.250259, 0.250259, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Level 1"
+text = "Level  1"
 flat = false
 clip_text = true
 
@@ -64,11 +68,12 @@ margin/left = 474.0
 margin/top = 405.0
 margin/right = 597.0
 margin/bottom = 459.0
-custom_colors/font_color_disabled = Color( 0.644531, 0.309677, 0.309677, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.941406, 0.253738, 0.253738, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Level 2"
+text = "Level  2"
 flat = false
 clip_text = true
 
@@ -82,11 +87,12 @@ margin/left = 474.0
 margin/top = 479.0
 margin/right = 597.0
 margin/bottom = 533.0
-custom_colors/font_color_disabled = Color( 0.644531, 0.309677, 0.309677, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.96875, 0.223267, 0.223267, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Level 3"
+text = "Level  3"
 flat = false
 clip_text = true
 
@@ -100,11 +106,12 @@ margin/left = 1518.0
 margin/top = 862.0
 margin/right = 1641.0
 margin/bottom = 916.0
-custom_colors/font_color_disabled = Color( 0.644531, 0.309677, 0.309677, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.828125, 0.229675, 0.229675, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "How to play?"
+text = "  How to play?"
 flat = false
 clip_text = true
 
@@ -138,7 +145,7 @@ color = Color( 0.090332, 0.411968, 0.625, 1 )
 
 transform/pos = Vector2( 104.981, 156.516 )
 transform/scale = Vector2( 2.99218, 2.99218 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 hframes = 6
 frame = 1
 
@@ -146,7 +153,7 @@ frame = 1
 
 transform/pos = Vector2( 602.981, 156.516 )
 transform/scale = Vector2( 2.99218, 2.99218 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 hframes = 6
 frame = 1
 
@@ -183,42 +190,42 @@ max_lines_visible = -1
 [node name="Fire1" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 234.674, 129.82 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 vframes = 8
 hframes = 8
 
 [node name="Fire2" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 735.291, 142.063 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
 vframes = 8
 hframes = 8
 
 [node name="Ice1" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 233.313, 180.154 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 vframes = 8
 hframes = 8
 
 [node name="Ice2" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 739.372, 182.874 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 vframes = 8
 hframes = 8
 
 [node name="Shock1" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 230.592, 237.289 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 vframes = 8
 hframes = 4
 
 [node name="Shock2" type="Sprite" parent="Popup/ColorFrame"]
 
 transform/pos = Vector2( 738.012, 234.568 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 vframes = 8
 hframes = 4
 
@@ -354,7 +361,7 @@ margin/right = 671.0
 margin/bottom = 411.0
 text = "1 vs 1 game
 
-You must destroy your oponent putting his life at 0
+You must destroy your oponent lowering his life at 0
 
 You can do it using diferent types of magic"
 percent_visible = 1.0

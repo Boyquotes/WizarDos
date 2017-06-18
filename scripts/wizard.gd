@@ -163,7 +163,7 @@ func checkPlayerControls():
 		get_node("/root/"+scene).fireCooldown(teamName)
 		var fire = scene_fireball.instance()
 		fire.property = team
-		fire.inicialize(Vector2(get_global_pos().x+15,get_global_pos().y-30),state)
+		fire.inicialize(Vector2(get_global_pos().x,get_global_pos().y),state)
 		get_node("/root/"+scene+"/walls").add_child(fire)
 		get_node("Timer_fire").start()
 		able_to_fire = false
@@ -171,7 +171,7 @@ func checkPlayerControls():
 		get_node("/root/"+scene).iceCooldown(teamName)
 		var ice = scene_icicle.instance()
 		ice.property = team
-		ice.inicialize(Vector2(get_global_pos().x+15,get_global_pos().y-30),state)
+		ice.inicialize(Vector2(get_global_pos().x,get_global_pos().y),state)
 		get_node("/root/"+scene+"/walls").add_child(ice)
 		get_node("Timer_ice").start()
 		able_to_ice = false
@@ -179,7 +179,7 @@ func checkPlayerControls():
 		get_node("/root/"+scene).shockCooldown(teamName)
 		var shock = scene_shock.instance()
 		shock.property = team
-		shock.inicialize(Vector2(get_global_pos().x+15,get_global_pos().y-30),state)
+		shock.inicialize(Vector2(get_global_pos().x,get_global_pos().y),state)
 		get_node("/root/"+scene+"/walls").add_child(shock)
 		get_node("Timer_shock").start()
 		able_to_shock = false

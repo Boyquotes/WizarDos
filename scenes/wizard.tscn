@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 radius = 16.0
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -25,7 +25,7 @@ draw_bg = true
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 0.713098, 0, 0, 0.596933, -3.51469, -9.58109 )
+shapes/0/transform = Matrix32( 1.02484, 0, 0, 0.642944, -4.08137, -8.0478 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -40,8 +40,8 @@ hframes = 6
 
 [node name="wizardColl" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -3.51469, -9.58109 )
-transform/scale = Vector2( 0.713098, 0.596933 )
+transform/pos = Vector2( -4.08137, -8.0478 )
+transform/scale = Vector2( 1.02484, 0.642944 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -98,7 +98,7 @@ margin/left = -39.0
 margin/top = -96.0
 margin/right = 41.0
 margin/bottom = -80.0
-custom_styles/fg = SubResource( 3 )
+custom_styles/fg = SubResource( 2 )
 custom_colors/font_color = Color( 0.522095, 0.522095, 0.734375, 1 )
 range/min = 0.0
 range/max = 100.0

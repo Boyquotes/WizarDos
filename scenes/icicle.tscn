@@ -7,8 +7,8 @@
 [sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 10.0
-height = 18.8323
+radius = 9.09889
+height = 80.1968
 
 [node name="icicle" type="Node2D"]
 
@@ -26,11 +26,10 @@ __meta__ = {
 
 [node name="icicleArea" type="Area2D" parent="icicleKinem"]
 
-transform/pos = Vector2( -4.29277, 18.3293 )
 transform/scale = Vector2( 1, 0.521115 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -2.19061e-08, -0.501153, 0.605867, -2.64833e-08, -14.2332, -31.5863 )
+shapes/0/transform = Matrix32( -3.28693e-08, -0.751962, 0.605867, -2.64833e-08, 0, 0 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -40,9 +39,8 @@ script/script = ExtResource( 2 )
 
 [node name="fireballColl" type="CollisionShape2D" parent="icicleKinem/icicleArea"]
 
-transform/pos = Vector2( -14.2332, -31.5863 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.501153, 0.605867 )
+transform/scale = Vector2( 0.751962, 0.605867 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0

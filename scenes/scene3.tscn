@@ -1,0 +1,212 @@
+[gd_scene load_steps=39 format=1]
+
+[ext_resource path="res://scripts/scene3.gd" type="Script" id=1]
+[ext_resource path="res://assets/tileset.res" type="TileSet" id=2]
+[ext_resource path="res://scripts/walls.gd" type="Script" id=3]
+[ext_resource path="res://scenes/wizard.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/spellFrame.png" type="Texture" id=5]
+[ext_resource path="res://scenes/coolDown.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/animationCD/animació4.png" type="Texture" id=7]
+[ext_resource path="res://assets/animationCD/animació5.png" type="Texture" id=8]
+[ext_resource path="res://assets/animationCD/animació6.png" type="Texture" id=9]
+[ext_resource path="res://assets/animationCD/animació7.png" type="Texture" id=10]
+[ext_resource path="res://assets/animationCD/animació8.png" type="Texture" id=11]
+[ext_resource path="res://assets/animationCD/animació9.png" type="Texture" id=12]
+[ext_resource path="res://assets/animationCD/animació10.png" type="Texture" id=13]
+[ext_resource path="res://assets/animationCD/animació11.png" type="Texture" id=14]
+[ext_resource path="res://assets/animationCD/animació12.png" type="Texture" id=15]
+[ext_resource path="res://assets/animationCD/animació13.png" type="Texture" id=16]
+[ext_resource path="res://assets/animationCD/animació14.png" type="Texture" id=17]
+[ext_resource path="res://assets/animationCD/animació15.png" type="Texture" id=18]
+[ext_resource path="res://assets/animationCD/animació16.png" type="Texture" id=19]
+[ext_resource path="res://assets/animationCD/animació17.png" type="Texture" id=20]
+[ext_resource path="res://assets/animationCD/animació18.png" type="Texture" id=21]
+[ext_resource path="res://assets/animationCD/animació19.png" type="Texture" id=22]
+[ext_resource path="res://assets/animationCD/animació20.png" type="Texture" id=23]
+[ext_resource path="res://assets/animationCD/animació21.png" type="Texture" id=24]
+[ext_resource path="res://assets/animationCD/animació22.png" type="Texture" id=25]
+[ext_resource path="res://assets/animationCD/animació23.png" type="Texture" id=26]
+[ext_resource path="res://assets/animationCD/animació24.png" type="Texture" id=27]
+[ext_resource path="res://assets/animationCD/animació25.png" type="Texture" id=28]
+[ext_resource path="res://assets/animationCD/animació26.png" type="Texture" id=29]
+[ext_resource path="res://assets/animationCD/animació27.png" type="Texture" id=30]
+[ext_resource path="res://assets/animationCD/animació28.png" type="Texture" id=31]
+[ext_resource path="res://assets/animationCD/animació29.png" type="Texture" id=32]
+[ext_resource path="res://assets/animationCD/animació30.png" type="Texture" id=33]
+[ext_resource path="res://assets/animationCD/animació31.png" type="Texture" id=34]
+[ext_resource path="res://assets/animationCD/animació32.png" type="Texture" id=35]
+[ext_resource path="res://assets/icicle.png" type="Texture" id=36]
+[ext_resource path="res://assets/shock.png" type="Texture" id=37]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "shockAnim",
+"speed": 3.63
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "iceAnim",
+"speed": 7.25
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "fireAnim",
+"speed": 19.3
+} ]
+
+[node name="scene3" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="floor" type="TileMap" parent="."]
+
+mode = 1
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 128, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 1
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -327674, 2, -327673, 2, -327672, 2, -327671, 2, -327670, 2, -327669, 2, -327668, 2, -327667, 2, -327666, 2, -327665, 2, -327664, 2, -327663, 2, -327662, 2, -327661, 2, -262138, 2, -196602, 2, -196596, 3, -196595, 3, -131066, 2, -65530, 2, -65526, 2, -65525, 2, -65524, 2, -65523, 2, -65522, 2, -65521, 2, 6, 2, 10, 2, 15, 2, 65542, 2, 65543, 3, 65546, 2, 65548, 3, 65549, 3, 65551, 2, 65554, 3, 131078, 2, 131082, 2, 131087, 2, 196614, 2, 196618, 2, 196619, 2, 196620, 2, 196621, 2, 196622, 2, 196623, 2, 262150, 2, 327686, 2, 327692, 3, 327693, 3, 393222, 2, 458758, 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="walls" type="TileMap" parent="."]
+
+editor/display_folded = true
+mode = 1
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 128, 64 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 1
+cell/y_sort = true
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( -327661, 2, -262125, 2, -196589, 2, -131053, 2, -65526, 2, -65525, 2, -65524, 2, -65523, 2, -65522, 2, -65521, 2, -65517, 2, 10, 2, 15, 2, 19, 2, 65546, 2, 65551, 2, 65555, 2, 131082, 2, 131087, 2, 131091, 2, 196618, 2, 196619, 2, 196620, 2, 196621, 2, 196622, 2, 196623, 2, 196627, 2, 262163, 2, 327699, 2, 393235, 2, 458758, 2, 458759, 2, 458760, 2, 458761, 2, 458762, 2, 458763, 2, 458764, 2, 458765, 2, 458766, 2, 458767, 2, 458768, 2, 458769, 2, 458770, 2, 458771, 2 )
+script/script = ExtResource( 3 )
+
+[node name="wizardBlue" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 476.004, 293.384 )
+
+[node name="wizardRed" parent="walls" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 1001.78, 603.503 )
+
+[node name="spellFrameBlue" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 226.273, 856.681 )
+transform/rot = 90.0
+transform/scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="coolDownFire" parent="spellFrameBlue" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 0.833313, -105 )
+
+[node name="CDanimation" parent="spellFrameBlue/coolDownFire"]
+
+visibility/self_opacity = 0.0
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "fireAnim"
+
+[node name="coolDownIce" parent="spellFrameBlue" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 0.833313, -5.83333 )
+texture = ExtResource( 36 )
+
+[node name="CDanimation" parent="spellFrameBlue/coolDownIce"]
+
+visibility/self_opacity = 0.0
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "iceAnim"
+
+[node name="coolDownShock" parent="spellFrameBlue" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1.1405, 94.7677 )
+texture = ExtResource( 37 )
+hframes = 5
+
+[node name="CDanimation" parent="spellFrameBlue/coolDownShock"]
+
+visibility/self_opacity = 0.0
+transform/pos = Vector2( -1.07456, -1.4073 )
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "shockAnim"
+
+[node name="spellFrameRed" type="Sprite" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1448.33, 855.204 )
+transform/rot = 90.0
+transform/scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 5 )
+
+[node name="coolDownFire" parent="spellFrameRed" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 2.25629, -94.7627 )
+
+[node name="CDanimation" parent="spellFrameRed/coolDownFire"]
+
+visibility/self_opacity = 0.0
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "fireAnim"
+
+[node name="coolDownIce" parent="spellFrameRed" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 2.25635, 0.00012207 )
+texture = ExtResource( 36 )
+
+[node name="CDanimation" parent="spellFrameRed/coolDownIce"]
+
+visibility/self_opacity = 0.0
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "iceAnim"
+
+[node name="coolDownShock" parent="spellFrameRed" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 1.22858, 90.7124 )
+texture = ExtResource( 37 )
+hframes = 5
+
+[node name="CDanimation" parent="spellFrameRed/coolDownShock"]
+
+visibility/self_opacity = 0.0
+transform/rot = -135.0
+frames = SubResource( 1 )
+animation = "shockAnim"
+
+
+[editable path="spellFrameBlue/coolDownFire"]
+[editable path="spellFrameBlue/coolDownIce"]
+[editable path="spellFrameBlue/coolDownShock"]
+[editable path="spellFrameRed/coolDownFire"]
+[editable path="spellFrameRed/coolDownIce"]
+[editable path="spellFrameRed/coolDownShock"]

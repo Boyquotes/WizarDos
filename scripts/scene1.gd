@@ -1,5 +1,9 @@
 extends Node2D
 
+var controller = null
+var scene_controller = null
+var scene = null
+
 func fireCooldown(team):
 	get_node("spellFrame"+team+"/coolDownFire/CDanimation").set_frame(0)
 	get_node("spellFrame"+team+"/coolDownFire/CDanimation").set_self_opacity(1)
@@ -25,7 +29,11 @@ func _fixed_process(delta):
 	pass
 
 func _ready():
+	scene = "scene1"
 	get_node("walls/wizardRed").change_team()
-	get_node("walls/wizardBlue").scene = "scene1"
-	get_node("walls/wizardRed").scene = "scene1"
+	get_node("walls/wizardBlue").scene = scene
+	get_node("walls/wizardRed").scene = scene
+	scene_controller = preload("res://scenes/control.tscn")
+	controller = scene_controller.instance()
+	add_child(controller)
 	set_fixed_process(true)

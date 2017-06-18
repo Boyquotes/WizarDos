@@ -23,10 +23,9 @@ collision/margin = 0.08
 
 [node name="fireballArea" type="Area2D" parent="fireballKinem"]
 
-editor/display_folded = true
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -2.81566e-08, -0.644147, 0.340315, -1.48756e-08, -21.1685, -0.249746 )
+shapes/0/transform = Matrix32( -2.81566e-08, -0.644147, 1.25909, -5.50367e-08, 0, 0 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -36,9 +35,8 @@ script/script = ExtResource( 2 )
 
 [node name="fireballColl" type="CollisionShape2D" parent="fireballKinem/fireballArea"]
 
-transform/pos = Vector2( -21.1685, -0.249746 )
 transform/rot = 90.0
-transform/scale = Vector2( 0.644147, 0.340315 )
+transform/scale = Vector2( 0.644147, 1.25909 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0

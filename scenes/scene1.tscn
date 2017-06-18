@@ -84,7 +84,6 @@ __meta__ = {
 
 [node name="walls" type="TileMap" parent="."]
 
-editor/display_folded = true
 mode = 1
 tile_set = ExtResource( 2 )
 cell/size = Vector2( 128, 64 )
@@ -112,6 +111,7 @@ transform/pos = Vector2( 1331.19, 657.171 )
 
 [node name="spellFrameBlue" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 226.273, 856.681 )
 transform/rot = 90.0
 transform/scale = Vector2( 1.2, 1.2 )
@@ -120,6 +120,7 @@ flip_h = true
 
 [node name="coolDownFire" parent="spellFrameBlue" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 0.833313, -105 )
 
 [node name="CDanimation" parent="spellFrameBlue/coolDownFire"]
@@ -131,6 +132,7 @@ animation = "fireAnim"
 
 [node name="coolDownIce" parent="spellFrameBlue" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 0.833313, -5.83333 )
 texture = ExtResource( 36 )
 
@@ -143,6 +145,7 @@ animation = "iceAnim"
 
 [node name="coolDownShock" parent="spellFrameBlue" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 1.1405, 94.7677 )
 texture = ExtResource( 37 )
 hframes = 5
@@ -157,6 +160,7 @@ animation = "shockAnim"
 
 [node name="spellFrameRed" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 1448.33, 855.204 )
 transform/rot = 90.0
 transform/scale = Vector2( 1.2, 1.2 )
@@ -164,27 +168,32 @@ texture = ExtResource( 5 )
 
 [node name="coolDownFire" parent="spellFrameRed" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2.25629, -94.7627 )
 
 [node name="CDanimation" parent="spellFrameRed/coolDownFire"]
 
 visibility/self_opacity = 0.0
+transform/rot = 0.0
 frames = SubResource( 1 )
 animation = "fireAnim"
 
 [node name="coolDownIce" parent="spellFrameRed" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 2.25635, 0.00012207 )
 texture = ExtResource( 36 )
 
 [node name="CDanimation" parent="spellFrameRed/coolDownIce"]
 
 visibility/self_opacity = 0.0
+transform/rot = 0.0
 frames = SubResource( 1 )
 animation = "iceAnim"
 
 [node name="coolDownShock" parent="spellFrameRed" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 1.22858, 90.7124 )
 texture = ExtResource( 37 )
 hframes = 5
@@ -192,6 +201,7 @@ hframes = 5
 [node name="CDanimation" parent="spellFrameRed/coolDownShock"]
 
 visibility/self_opacity = 0.0
+transform/rot = 0.0
 frames = SubResource( 1 )
 animation = "shockAnim"
 

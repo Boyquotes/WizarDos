@@ -27,11 +27,11 @@ __meta__ = {
 
 [node name="shockArea" type="Area2D" parent="shockKinem"]
 
-transform/pos = Vector2( -4.29277, 18.3293 )
+transform/pos = Vector2( 3.92398, -0.0272751 )
 transform/scale = Vector2( 1, 0.521115 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( -3.11322e-08, -0.712222, 1.53776, -6.72176e-08, 6.70026, -34.8341 )
+shapes/0/transform = Matrix32( -3.11322e-08, -0.712222, 1.53776, -6.72176e-08, -0.292729, 1.73341 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -41,7 +41,7 @@ script/script = ExtResource( 2 )
 
 [node name="shockColl" type="CollisionShape2D" parent="shockKinem/shockArea"]
 
-transform/pos = Vector2( 6.70026, -34.8341 )
+transform/pos = Vector2( -0.292729, 1.73341 )
 transform/rot = 90.0
 transform/scale = Vector2( 0.712222, 1.53776 )
 shape = SubResource( 1 )

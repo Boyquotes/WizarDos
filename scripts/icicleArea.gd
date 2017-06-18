@@ -1,13 +1,16 @@
 extends Area2D
 
+var damage = null
+
 func solveBodyCollision(body):
 	if (body.has_method("amIWizard")):
 		if (body.amIWizard() != get_parent().get_parent().property):
-			body.damage(15,"ice")
+			body.damage(damage,"ice")
 			body.freeze()
 			get_parent().get_parent().queue_free()
-	elif (body.has_method("amIWall")):
+	else:
 		get_parent().get_parent().queue_free()
 
 func _ready():
+	damage = 15
 	connect('body_enter',self,'solveBodyCollision')
