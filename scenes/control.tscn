@@ -36,20 +36,9 @@ process/pause_mode = 2
 z/z = 1
 script/script = ExtResource( 1 )
 
-[node name="popup" type="Popup" parent="."]
+[node name="background" type="ColorFrame" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
-popup/exclusive = false
-
-[node name="background" type="ColorFrame" parent="popup"]
-
+visibility/visible = false
 visibility/self_opacity = 0.5
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -61,7 +50,7 @@ margin/right = 1664.0
 margin/bottom = 936.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="window" type="ColorFrame" parent="popup/background"]
+[node name="window" type="ColorFrame" parent="background"]
 
 editor/display_folded = true
 material/material = SubResource( 2 )
@@ -75,7 +64,7 @@ margin/right = 1268.0
 margin/bottom = 381.0
 color = Color( 0.851563, 0.822976, 0.518921, 1 )
 
-[node name="announcment" type="Label" parent="popup/background/window"]
+[node name="announcment" type="Label" parent="background/window"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -93,8 +82,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="buttonReset" type="Button" parent="popup/background"]
+[node name="buttonReset" type="Button" parent="background"]
 
+process/pause_mode = 2
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -112,8 +102,9 @@ text = "Reset"
 flat = false
 clip_text = true
 
-[node name="buttonMenu" type="Button" parent="popup/background"]
+[node name="buttonMenu" type="Button" parent="background"]
 
+process/pause_mode = 2
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -131,8 +122,8 @@ text = "Menu"
 flat = false
 clip_text = true
 
-[connection signal="pressed" from="popup/background/buttonReset" to="." method="_on_buttonReset_pressed"]
+[connection signal="pressed" from="background/buttonReset" to="." method="_on_buttonReset_pressed"]
 
-[connection signal="pressed" from="popup/background/buttonMenu" to="." method="_on_buttonMenu_pressed"]
+[connection signal="pressed" from="background/buttonMenu" to="." method="_on_buttonMenu_pressed"]
 
 
